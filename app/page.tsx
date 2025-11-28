@@ -55,7 +55,7 @@ export default function Home() {
                   </svg>
                 </div>
                 <Image
-                  src="/images/batMann.jpg"
+                  src="/Aura.jpg"
                   alt="Batman"
                   className="object-cover"
                   fill
