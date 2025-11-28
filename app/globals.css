@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #121212;
+  --foreground: #e0e0e0;
+  --primary: #ffcc00;
+  --secondary: #333333;
+  --accent: #4a4a4a;
+  --batman-black: #0f0f0f;
+  --batman-yellow: #ffcc00;
+  --batman-gray: #4a4a4a;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-heading: var(--font-oswald);
+  --font-body: var(--font-roboto);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+}
+
+@layer components {
+  .batman-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  .batman-button {
+    background-color: var(--batman-yellow);
+    color: var(--batman-black);
+    font-weight: 700;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.25rem;
+    transition: all 0.3s ease;
+  }
+
+  .batman-button:hover {
+    background-color: var(--batman-black);
+    color: var(--batman-yellow);
+    box-shadow: 0 0 10px var(--batman-yellow);
+  }
+
+  .batman-card {
+    background-color: var(--batman-gray);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .batman-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  }
+}
